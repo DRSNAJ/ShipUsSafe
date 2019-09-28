@@ -1,0 +1,102 @@
+<!DOCHTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+    
+    <!-- Uses a header that contracts as the page scrolls down. -->
+    <!-- Header 'Ship Us Safe'-->
+    <style>
+    .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+      padding-right: 0;
+    }
+    </style>
+
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--waterfall">
+        <!-- Top row, always visible -->
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Ship Us Safe</span>
+          <div class="mdl-layout-spacer"></div>
+          </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+            <!-- Source Port  -->
+            <form action="#" autocomplete = 'on'>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type='select' id="sourcePort">
+                <label class="mdl-textfield__label" for="sourcePort"> Source Port</label>
+              </div>
+            </form>
+            
+            <!--Destination Port--> 
+             <form action="#" autocomplete = 'on'>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type='select' id="destinationPort">
+                <label class="mdl-textfield__label" for="destinationPort"> Destination Port</label>
+              </div>
+            </form>
+            
+            <!--Add New Port Button-->
+            <!--Button will redirect to different page...User Interface 1.2-->
+            <!--TO DO: add a function to redirect to different page-->
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Add New Port
+            </button>
+            
+            <!--Date of departure-->
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield">
+                  <h3 for = 'dateOfDeparture'><font size = '4'>Date of Departure</font></h3>
+                <input class="mdl-textfield__input" type="date" id="dateOfDeparture" placeholder=''>
+                <label class="mdl-textfield__label" for="dateOfDeparture">Date of Departure</label>
+              </div>
+            </form>
+            
+            <!--Ship Size-->
+            <!--TO DO: dropdwon list with all possible ship sizes-->
+            <form action="#" autocomplete = 'on'>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type='select' id="shipSize">
+                <label class="mdl-textfield__label" for="shipSize"> Ship Size</label>
+              </div>
+            </form>
+            
+            <!--TO DO: find out how to create a dropdown list for MDL-->
+            <!--below is normal code for dropdown list-->
+            <select id = 'shipSize'>
+                <option></option>
+            </select>
+
+
+            
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </div>
+      </main>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+</html>

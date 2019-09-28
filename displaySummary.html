@@ -1,0 +1,310 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+<html>
+    <head>
+        <title>Display a map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-orange.min.css" />
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-orange.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css">
+        <!--Map stuff-->
+        <link rel="stylesheet" href="mapSummary.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="styleSummary.css">
+
+        <style>
+            #view-source {
+                position: fixed;
+                display: block;
+                right: 0;
+                bottom: 0;
+                margin-right: 60px;
+                margin-bottom: 0px;
+                z-index: 900;
+            }
+            html,
+            body {
+                height: 100%;
+                margin: 0px;
+                padding: 0px
+            }
+            #map-background,
+            #map-container,
+            #map-overlay,
+            #content {
+                width: 100%;
+                min-height: 100%;
+                position: center;
+            }
+            #map-background {
+                z-index: -1;
+            }
+            #map-container {
+                z-index: 0;
+            }
+            #map-overlay {
+                z-index: 1;
+                background: none;
+            }
+            #content {
+                z-index: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div id="map-container">
+            </div>
+            <div id="map-overlay">
+            </div>
+        </div>
+        <div id="content">
+            <div class="demo-container mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                    <div class="demo-crumbs mdl-color-text--grey-500">
+                        <center>
+                            Scroll up for summary
+                        </center>
+                    </div>
+                    <style>
+                        .demo-card-wide.mdl-card {
+                            width: 100%;
+                            margin-bottom:20;
+                            min-height: 30;
+                            height: -50
+                        }
+                        .demo-card-wide > .mdl-card__title {
+                            height: 70px;
+
+                        }
+                        .demo-card-wide > .mdl-card__menu {
+                            color: #fff;
+
+                        }
+                        .mdl-card__subtitle-text {
+                            font-size: 50;
+                            margin-left: 15;
+                            margin-bottom: 33px
+                        }
+                    </style>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Total distance</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            7000 km
+                        </div>
+                    </div>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Estimated duration of journey</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            7 days
+                        </div>
+                    </div>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Name of ship</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            Beetle
+                        </div>
+                    </div>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">weather</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            Day 1
+                        </div>
+                    </div>
+
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="location.href='prototype_mainUI_1.0.html';">
+                        Alter trip
+                    </button>
+
+                    <!-- Accent-colored raised button with ripple -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='prototype_mainUI_1.0.html';">
+                        Cancel Trip
+                    </button>
+
+                    <script>
+                        mapboxgl.accessToken = 'pk.eyJ1Ijoic3VzaGl6b21iaWUiLCJhIjoiY2swNnNobXIxMGRyNDNkcWJsbDNhdzVzeCJ9.DZRF3VzurvRqfiTCdwGh9Q';
+                        var map = new mapboxgl.Map({
+                            container: 'map-container', // container id
+                            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                            center: [-74.50, 40], // starting position [lng, lat]
+                            zoom: 9 // starting zoom
+                        });
+                    </script>
+
+                    </body>
+<<<<<<< Updated upstream
+=======
+=======
+<html>
+    <head>
+        <title>Display a map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-orange.min.css" />
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-orange.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css">
+        <!--Map stuff-->
+        <link rel="stylesheet" href="mapSummary.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="styleSummary.css">
+
+        <style>
+            #view-source {
+                position: fixed;
+                display: block;
+                right: 0;
+                bottom: 0;
+                margin-right: 60px;
+                margin-bottom: 0px;
+                z-index: 900;
+            }
+            html,
+            body {
+                height: 100%;
+                margin: 0px;
+                padding: 0px
+            }
+            #map-background,
+            #map-container,
+            #map-overlay,
+            #content {
+                width: 100%;
+                min-height: 100%;
+                position: center;
+            }
+            #map-background {
+                z-index: -1;
+            }
+            #map-container {
+                z-index: 0;
+            }
+            #map-overlay {
+                z-index: 1;
+                background: none;
+            }
+            #content {
+                z-index: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div id="map-container">
+            </div>
+            <div id="map-overlay">
+            </div>
+        </div>
+        <div id="content">
+            <div class="demo-container mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                    <div class="demo-crumbs mdl-color-text--grey-500">
+                        <center>
+                            Scroll up for summary
+                        </center>
+                    </div>
+                    <style>
+                        .demo-card-wide.mdl-card {
+                            width: 100%;
+                            margin-bottom:20;
+                            min-height: 30;
+                            height: -50
+                        }
+                        .demo-card-wide > .mdl-card__title {
+                            height: 70px;
+
+                        }
+                        .demo-card-wide > .mdl-card__menu {
+                            color: #fff;
+
+                        }
+                        .mdl-card__subtitle-text {
+                            font-size: 50;
+                            margin-left: 15;
+                            margin-bottom: 33px
+                        }
+                    </style>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Total distance</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            7000 km
+                        </div>
+                    </div>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Estimated duration of journey</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            7 days
+                        </div>
+                    </div>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Name of ship</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            Beetle
+                        </div>
+                    </div>
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">weather</h2>
+                        </div>
+                        <div class="mdl-card__subtitle-text">
+                            Day 1
+                        </div>
+                    </div>
+
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="location.href='prototype_mainUI_1.0.html';">
+                        Alter trip
+                    </button>
+
+                    <!-- Accent-colored raised button with ripple -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='prototype_mainUI_1.0.html';">
+                        Cancel Trip
+                    </button>
+
+                    <script>
+                        mapboxgl.accessToken = 'pk.eyJ1Ijoic3VzaGl6b21iaWUiLCJhIjoiY2swNnNobXIxMGRyNDNkcWJsbDNhdzVzeCJ9.DZRF3VzurvRqfiTCdwGh9Q';
+                        var map = new mapboxgl.Map({
+                            container: 'map-container', // container id
+                            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                            center: [-74.50, 40], // starting position [lng, lat]
+                            zoom: 9 // starting zoom
+                        });
+                    </script>
+
+                    </body>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+                </html>
